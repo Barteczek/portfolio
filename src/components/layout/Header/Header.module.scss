@@ -1,0 +1,44 @@
+@import '../../../styles/settings.scss';
+
+.root {
+  display: flex;
+  padding: 36px 34px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 36px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.navLink {
+  margin: 0 20px;
+  padding: 5px 0;
+  text-transform: uppercase;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    background-color: $color-primary;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: $transition;
+  }
+
+  &:hover::after {
+    height: 3px;
+    width: 100%;
+  }
+
+  &.selected {
+    border-bottom: 3px solid $color-primary;
+  }
+}
+

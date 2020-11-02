@@ -1,0 +1,47 @@
+
+$color-background-main: linear-gradient(253deg, rgba(0,0,0,1) 0%, rgb(38, 38, 38) 100%);
+
+$color-primary: #007fe0;
+
+
+
+
+
+
+
+
+
+$color-light: #fff;
+
+$color-success: #01916d;
+$color-success-back: #00bc8c;
+$color-info: #2b7cb3;
+$color-info-back: #3598db;
+$color-warning: #f0932b;
+$color-warning-back: #d68529;
+$color-danger: #f0932b;
+$color-danger-back: #d68529;
+$color-error: #EA2027;
+$color-error-back: #ff5d6c;
+
+$color-textfield-border: #ddd;
+$color-editor-border: #ccc;
+$color-editor-border-light: #ddd;
+
+$font-main: 'Poppins', sans-serif;
+
+$radius: 5px;
+$base-size: 10px;
+$transition: all 0.3s ease-in;
+
+/* SETTINGS */
+
+%hover {
+  transition: $transition;
+}
+
+
+/* RWD BREAKPOINTS */
+$mobile-breakpoint: 575px;
+$tablet-breakpoint: 787px;
+$desktop-breakpoint: 991px;

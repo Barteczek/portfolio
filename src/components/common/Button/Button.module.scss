@@ -1,0 +1,70 @@
+@import "../../../styles/settings.scss";
+
+// .root {
+// }
+
+.main {
+  background-color: $color-primary;
+  color: $color-light;
+  text-transform: uppercase;
+  padding: 12px 30px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 100%;
+    background-color: $color-light;
+    transition: $transition;
+  }
+
+  &:hover {
+    @extend %hover;
+    background-color: inherit;
+    color: $color-primary;
+  }
+
+  &:hover::before {
+    width: 100%;
+    background-color: inherit;
+    border: 1px solid $color-light;
+  }
+}
+
+.small {
+  @extend .main;
+
+  font-size: 13px;
+  line-height: 24px;
+  padding: 5px 10px;
+  font-weight: 400;
+}
+
+.outline,
+.outline__checked {
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid $color-light;
+  color: $color-light;
+  font-size: 13px;
+  line-height: 22px;
+  margin-right: 5px;
+
+  &__checked {
+    border-color: $color-primary;
+    background-color: $color-primary;
+    color: $color-light;
+  }
+
+  &:not(.noHover):hover {
+    @extend %hover;
+
+    background-color: $color-light;
+    color: $color-light;
+    border-color: $color-light;
+  }
+}

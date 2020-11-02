@@ -1,0 +1,32 @@
+@import './settings.scss';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html { 
+  font-size: 62.5%; 
+} 
+
+body {
+  margin: 0;
+  padding: 0;
+  color: $color-light;
+  background: $color-background-main;
+  min-height: 100vh;
+  font-family: $font-main;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  letter-spacing: 0.5px;
+}
+
+a, a:hover, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  margin: 2rem auto;
+}
+
+@import './typography.scss';
