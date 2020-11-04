@@ -22,7 +22,8 @@ const Component = ({className, children}) => (
       {nav.map((name, index) => (
         <NavLink
           key={index}
-          to={`/${name}`}
+          exact={true}
+          to={name === 'home' ? '/' : `${name}`}
           activeClassName={styles.selected}
           className={styles.navLink}
         >

@@ -17,23 +17,26 @@ const elipses = [
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     {elipses.map((el, i) => (
-      <img key={i} className={`elipse-${i}`} src={el} alt={`elipse-${i}`}/>
+      <img key={i} className={styles.elipse} src={el} alt={`elipse-${i}`}/>
     ))}
-    <div>
+    <div className={styles.name}>
       <h1>Bartosz</h1>
-      <Surname />
+      <div className={styles.surname}>
+        <Surname />
+      </div>
     </div>
     <h3>junior web developer</h3>
-    <Button>
-      <i class="fab fa-linkedin"></i>
-      LinkedIn
-    </Button>
-    <Button>
-      <i class="fab fa-github-square"></i>
-      GitHub
-    </Button>
-    
-    <h2>Homepage</h2>
+    <div className={styles.buttons}>
+      <Button variant='outline'>
+        
+        <i class="fab fa-linkedin"></i>
+        LinkedIn
+      </Button>
+      <Button variant='outline'>
+        <i class="fab fa-github-square"></i>
+        GitHub
+      </Button>
+    </div>
     {children}
   </div>
 );

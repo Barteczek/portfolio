@@ -11,7 +11,6 @@ import styles from './Button.module.scss';
 const Component = ({variant, className, children}) => {
   const classes = [];
 
-
   if (variant) classes.push(styles[variant]);
   else classes.push('main');
 
